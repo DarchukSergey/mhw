@@ -712,7 +712,17 @@ line-height: 38px;
     left: -100px;
 }
 
+.grocery__fruits::before {
+    position: absolute;
+    content: '';
+    background: url('../images/blueberry.png') center no-repeat;
+    width: 73px;
+    height: 73px;
+    left: -100px;
+}
+
 .grocery--container{
     max-width: 755px;
-    margin: 0 auto;
+    margin-left: auto;
+    margin-right: auto;
 }

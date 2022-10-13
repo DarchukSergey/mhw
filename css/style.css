@@ -1,0 +1,718 @@
+@font-face {
+    font-family: 'AmpleSoft';
+    src:
+        url('../fonts/AmpleSoft/AmpleSoftPro-Bold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/AmpleSoft/AmpleSoftPro-Bold.woff2') format('woff2'),
+        url('../fonts/AmpleSoft/AmpleSoftPro-Bold.woff') format('woff'),
+        url('../fonts/AmpleSoft/AmpleSoftPro-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'AmpleSoft';
+    src:
+        url('../fonts/AmpleSoft/AmpleSoftPro-Medium.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/AmpleSoft/AmpleSoftPro-Medium.woff2') format('woff2'),
+        url('../fonts/AmpleSoft/AmpleSoftPro-Medium.woff') format('woff'),
+        url('../fonts/AmpleSoft/AmpleSoftPro-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'AmpleSoft';
+    src:
+        url('../fonts/AmpleSoft/AmpleSoftPro-Light.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/AmpleSoft/AmpleSoftPro-Light.woff2') format('woff2'),
+        url('../fonts/AmpleSoft/AmpleSoftPro-Light.woff') format('woff'),
+        url('../fonts/AmpleSoft/AmpleSoftPro-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'AmpleSoft';
+    src:
+        url('../fonts/AmpleSoft/AmpleSoftPro-ExtraLight.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/AmpleSoft/AmpleSoftPro-ExtraLight.woff2') format('woff2'),
+        url('../fonts/AmpleSoft/AmpleSoftPro-ExtraLight.woff') format('woff'),
+        url('../fonts/AmpleSoft/AmpleSoftPro-ExtraLight.ttf') format('truetype');
+    font-weight: 200;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: 'AmpleSoft';
+    src:
+        url('../fonts/AmpleSoft/AmpleSoftPro-Thin.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/AmpleSoft/AmpleSoftPro-Thin.woff2') format('woff2'),
+        url('../fonts/AmpleSoft/AmpleSoftPro-Thin.woff') format('woff'),
+        url('../fonts/AmpleSoft/AmpleSoftPro-Thin.ttf') format('truetype');
+    font-weight: 100;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Onest';
+    src:
+        url('../fonts/AmpleSoft/AmpleSoftPro-Regular.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/AmpleSoft/AmpleSoftPro-Regular.woff2') format('woff2'),
+        url('../fonts/AmpleSoft/AmpleSoftPro-Regular.woff') format('woff'),
+        url('../fonts/AmpleSoft/AmpleSoftPro-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Onest';
+    src:
+        url('../fonts/Onest/OnestBold.woff') format('woff'),
+        url('../fonts/Onest/OnestBold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Onest';
+    src:
+        url('../fonts/Onest/OnestMedium.woff') format('woff'),
+        url('../fonts/Onest/OnestMedium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Onest';
+    src:
+        url('../fonts/Onest/OnestRegular.woff') format('woff'),
+        url('../fonts/Onest/OnestRegular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Onest';
+    src:
+        url('../fonts/Onest/OnestLight.woff') format('woff'),
+        url('../fonts/Onest/OnestLight.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+
+:root {
+    --text: #243838;
+    --green: #B2FA63;
+    --purple: #B2A1FF;
+    --orange: #FF7833;
+    --black: #1C1C1E;
+    --bg: #FBFBFB;
+    --bg-am: #FAF9F9;
+    --bg-grocery: #F9F8FF;
+    --link-color: #686868;
+    --white: #ffffff;
+    --border-purple: #CEC4FF;
+    --purple-opacity: rgb(81%, 77%, 100%, 0.13);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    display: inline-block;
+}
+
+ul,
+li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+p {
+    margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+}
+
+h1,
+h2,
+h3 {
+    font-family: 'Onest', sans-serif;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 50px;
+}
+
+button {
+    padding: 0;
+    border: none;
+    font: inherit;
+    color: inherit;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+body {
+    font-family: 'Onest', sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 25px;
+    color: var(--text);
+}
+
+.wrapper {
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+.container {
+    max-width: 1270px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin: 0 auto;
+}
+
+.header {
+    margin-bottom: 60px;
+}
+
+.header__logo {
+    margin-top: 55px;
+}
+
+.logo {
+    width: 367px;
+    height: 122px;
+    margin-bottom: 65px;
+}
+
+/* .header__top {
+}
+.header__logo {
+}
+.logo {
+}*/
+.header__inner {
+    margin-bottom: 60px;
+}
+
+.header__inner-head {
+    margin-bottom: 40px;
+}
+
+
+.header__inner-title {}
+
+.header__inner-date {
+    font-size: 24px;
+    font-weight: 300;
+    line-height: 31px;
+}
+
+.header__inner-pagination {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+
+.header__jump {
+    margin-right: 25px;
+}
+
+.header__jump-text {
+    position: relative;
+    text-align: center;
+    margin-bottom: 8px;
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 31px;
+}
+
+.header__jump-text::after {
+    content: '';
+    position: absolute;
+    background-color: var(--green);
+    background-image: url('../images/Arrow-right.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 92px;
+    border-radius: 40px;
+    padding: 15px 13px;
+    top: 30px;
+    left: 0;
+}
+
+.header__jump-button:hover {}
+
+.header__calendar {}
+
+.calendar-itmes {
+    display: flex;
+}
+
+.calendar-item {
+    background-color: var(--purple-opacity);
+    border-radius: 40px;
+    width: 118px;
+    padding-top: 20px;
+    padding-bottom: 16px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'AmpleSoft';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 30px;
+    cursor: pointer;
+    transition: all .3s;
+}
+
+.calendar__item-img path {
+    transition: all .3s;
+}
+
+.calendar-item:hover {
+    background-color: var(--purple);
+}
+
+.calendar-item:hover .calendar__item-img path {
+    fill: #fff;
+}
+
+.calendar-item:last-child {
+    padding: 39px 11px 33px;
+}
+
+.calendar-item+.calendar-item {
+    margin-left: 15px;
+}
+
+.calendar__item-week {}
+
+.calendar__item-img {}
+
+.calendar__item-number {}
+
+.header__bottom {
+    font-family: 'Onest';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 25px;
+}
+
+.day {}
+
+.day__header {
+    margin-bottom: 50px;
+}
+
+.day__header-date {
+    display: flex;
+    font-family: 'AmpleSoft';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 50px;
+    align-items: center;
+    margin-bottom: 45px;
+}
+
+.day__dataname {
+    margin-right: 35px;
+
+}
+
+.day__datanumber {
+    background-color: var(--purple);
+    color: var(--white);
+    padding: 7px 36px;
+    border-radius: 40px;
+
+
+}
+
+.day__header-calories {
+    display: flex;
+    justify-content: space-between;
+}
+
+.day__header-calories_item+.day__header-calories_item {
+    margin-left: 15px;
+}
+
+.day__header-calories_percent {
+    display: flex;
+}
+
+.day__header-calories_item.day__header-calories_total {
+    display: flex;
+    flex-direction: column;
+    padding-left: 113px;
+    padding-right: 113px;
+    justify-content: center;
+    text-align: center;
+    margin-right: 15px;
+}
+
+.day__header-calories_item {
+    display: flex;
+    background-color: var(--bg);
+    padding: 30px 35px;
+    border-radius: 40px;
+    box-shadow: 0px 1px 2px rgba(133, 133, 133, 0.24);
+    border-radius: 40px;
+}
+
+.calories__item-title {
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 51px;
+}
+
+.calories__item-text {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 31px;
+}
+
+.calories__item-image {}
+
+.day__body {}
+
+.day__food {
+    margin-bottom: 130px;
+}
+
+.day__food-compound {
+    display: flex;
+    justify-content: space-between;
+    border: 2px solid #F3F3F3;
+    border-radius: 40px;
+    margin-bottom: 40px;
+}
+
+.day__food-compound_name {
+
+    font-family: 'AmpleSoft';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 50px;
+    padding: 27px 35px;
+}
+
+.day__food-compound_items {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin: 32px 35px;
+}
+
+
+
+.day__food-compound_item:first-child {
+    color: var(--white);
+    background-color: var(--purple);
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 31px;
+}
+
+.day__food-compound_item {
+    background: var(--bg);
+    padding: 5px 20px;
+    border-radius: 40px;
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 31px;
+}
+
+.day__food-compound_item+.day__food-compound_item {
+    margin-left: 15px;
+}
+
+.day__food-card {
+    display: flex;
+    /* justify-content: space-between; */
+    padding-bottom: 30px;
+    margin-bottom: 30px;
+    border-bottom: 1px solid var(--border-purple);
+}
+
+.day__food-card:last-child {
+    border: none;
+    padding: 0;
+    border-bottom: 50px;
+}
+
+.day__card-content_wrapper {
+    width: 100%;
+}
+
+.day__card-image {
+    position: relative;
+    margin-right: 60px;
+}
+
+.day__card-img {
+    border-radius: 40px;
+}
+
+.day__card-content {
+    display: grid;
+    grid-template-columns: 40% 60%;
+    background-color: var(--bg);
+    border-radius: 40px;
+    padding: 25px 35px 40px;
+}
+
+.day__card-img_text {
+    position: absolute;
+    bottom: 5px;
+    background-color: rgba(245, 243, 255, 0.7);
+    display: block;
+    left: 0;
+    right: 0;
+    text-align: center;
+    align-items: center;
+    padding: 26px;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 31px;
+    border-radius: 0 0 40px 40px;
+}
+
+.day__card-ingredients {
+    font-weight: 500;
+}
+
+.day__card-title {
+    margin-bottom: 5px;
+}
+
+.day__card-items {
+    font-weight: 300;
+    margin-bottom: 10px;
+}
+
+.day__card-item {}
+
+.day__card-ingredients_link {
+    color: var(--link-color);
+    text-decoration: underline;
+}
+
+.day__card-item_text {
+    margin-bottom: 7px;
+}
+
+.card-item__ingredients {
+    display: inline-block;
+    font-weight: 500;
+    padding: 5px 10px;
+    border-radius: 40px;
+}
+
+.card-item__ingredients-portion {
+    background-color: var(--green);
+    margin-right: 10px;
+    margin-bottom: 5px;
+}
+
+.card-item__ingredients-calories {
+    background-color: var(--purple);
+    color: var(--white);
+}
+
+
+.recipes {
+    margin-bottom: 130px;
+}
+
+.recipes__head{
+    text-align: center;
+    display: block;
+    margin-bottom: 92px;
+}
+
+.recipes__title {
+    padding: 27px 80px;
+    border-radius: 40px;
+    background-color: var(--purple);
+    font-size: 40px;
+    line-height: 51px;
+    color: var(--white);
+    display: inline;
+}
+
+.recipes__items {}
+
+.recipes__item {
+border-radius: 40px;
+margin-bottom: 25px;
+}
+
+.recipes__item:nth-child(odd) {
+    border: 2px solid #E9E5FE;
+}
+
+.recipes__item:nth-child(even) {
+    background-color: var(--bg);
+}
+
+.recipes__item-title {
+    font-weight: 700;
+font-size: 24px;
+line-height: 31px;
+margin-bottom: 16px;
+}
+
+.recipes__item-quantity,
+.recipies__item-step {
+    font-weight: 300;
+    margin-bottom: 13px;
+}
+
+.recipes__item-quantity span{
+    background-color: var(--green);
+    padding: 5px 8px;
+    border-radius: 40px;
+    font-weight: 500;
+    margin-left: 15px;
+}
+
+.recipies__item-step {
+    margin-bottom: 10px;
+}
+
+.recipies__item-step_span {
+    font-weight: 500;
+    color: var(--orange);
+}
+
+.recipes__item-inner{
+    padding:40px 35px;
+}
+
+.grocery {}
+
+.grocery__head {
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 31px;
+    text-align: center;
+    display: block;
+    margin-bottom: 55px;
+}
+
+.grocery__title {
+    background-color: var(--green);
+    padding:25px 130px;
+    border-radius: 40px;
+    display: inline-block;
+    text-align: center;
+    margin-bottom: 50px;
+
+}
+
+.drocery__date {
+    margin-bottom: 20px;
+}
+
+.grocery__text {}
+
+.grocery__block {
+    min-width: 1030px;
+    background-color: var(--bg-grocery);
+    border-radius: 40px;
+    padding: 70px 85px 90px;
+
+}
+
+.grocery__block-chapter {
+    
+}
+
+.grocery__block-title {
+    font-weight: 500;
+font-size: 40px;
+line-height: 51px;
+margin-bottom: 60px;
+position: relative;
+}
+
+.grocery__items {
+    border-bottom: 1px solid var(--border-purple);
+    margin-bottom: 75px;
+}
+
+.grocery__items:last-child{
+    border: none;
+}
+.grocery__item {
+    border-bottom: 1px solid var(--white);
+    padding-bottom: 25px;
+margin-bottom: 20px;
+}
+
+.grocery__item-ingredient {
+    font-weight: 300;
+font-size: 24px;
+line-height: 31px;
+
+display: grid;
+grid-template-columns: 1fr 1fr;
+}
+
+.grocery__item:last-child .grocery__item-ingredient{
+    border: none;
+}
+
+.grocery__item-ingredient_title {
+    font-weight: 500;
+font-size: 30px;
+line-height: 38px;
+}
+
+.grocery__item-ingredient_text {}
+
+.grcery__item-weight {}
+
+
+.grocery__vegetables::before {
+    position: absolute;
+    content: '';
+    background: url('../images/carrot.png') center no-repeat;
+    width: 73px;
+    height: 73px;
+    left: -100px;
+}
+
+.grocery--container{
+    max-width: 755px;
+    margin: 0 auto;
+}

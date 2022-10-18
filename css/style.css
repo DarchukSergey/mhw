@@ -296,11 +296,15 @@ body {
 }
 
 .calendar-item:last-child {
-    padding: 39px 11px 33px;
+    padding: 20px 11px 29px;
 }
 
 .calendar-item+.calendar-item {
     margin-left: 15px;
+}
+
+.calendar__item-week {
+    margin-bottom: 5px;
 }
 
 .header__bottom {
@@ -369,7 +373,53 @@ body {
     padding: 30px 35px;
     border-radius: 40px;
     box-shadow: 0px 1px 2px rgba(133, 133, 133, 0.24);
-    border-radius: 40px;
+    max-width: 320px;
+    flex-direction: column;
+    position: relative;
+}
+
+.percent-progress {
+    width: 200px;
+    height: 100px;
+}
+
+.percent__value {
+    position: relative;
+    z-index: 2;
+}
+
+.percent-progress svg {
+    height: 130px;
+    width: 200px;
+    fill: none;
+    stroke: #FF7833;
+    stroke-linecap: round;
+}
+
+
+
+.calories {
+    display: inline-block;
+    font-weight: 700;
+    background-color: var(--green);
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 40%;
+    width: 46px;
+    height: 46px;
+    text-align: center;
+    line-height: 46px;
+}
+
+.percent__item-title {
+    text-align: center;
+    font-weight: 700;
+}
+
+.percent__zero {
+    padding-top: 20px;
+    font-weight: 700;
 }
 
 .calories__item-title {
@@ -430,7 +480,7 @@ body {
 
 .day__food-compound_item:first-child {
     color: var(--white);
-    background-color: var(--purple);
+    background-color: var(--green);
     font-weight: 700;
     font-size: 24px;
     line-height: 31px;
@@ -530,13 +580,13 @@ body {
 }
 
 .card-item__ingredients-portion {
-    background-color: var(--green);
+    padding-left: 0;
     margin-right: 10px;
     margin-bottom: 5px;
 }
 
 .card-item__ingredients-calories {
-    background-color: var(--purple);
+    background-color: var(--green);
     color: var(--white);
 }
 
@@ -786,4 +836,52 @@ body {
 
 .grocery--container {
     margin-left: 100px;
+}
+
+#calories_percent-page {
+    width: 200px;
+    height: 100px;
+}
+
+#percent-value {
+    width: 200px;
+    height: 100px;
+    position: relative;
+    z-index: 2;
+}
+
+.calories_percent-page svg {
+    height: 130px;
+    width: 200px;
+    fill: none;
+    stroke: #FF7833;
+    stroke-linecap: round;
+}
+
+.wrapper {
+    position: relative;
+}
+
+.calories_percent-zero {
+    font-family: 'Onest';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 25px;
+    color: #243838;
+}
+
+.calories_percent-text {
+    display: inline-block;
+    font-family: 'Onest';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 25px;
+    background-color: var(--green);
+    padding: 10px;
+    border-radius: 50%;
+    position: absolute;
+    top: 28%;
+    left: 8.5%;
 }
